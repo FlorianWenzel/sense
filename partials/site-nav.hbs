@@ -1,0 +1,31 @@
+<nav class="site-nav">
+    <div class="site-nav-left">
+        {{^is "home"}}
+            {{#if @site.logo}}
+                <a class="site-nav-logo" href="{{@site.url}}"><img src="{{img_url @site.icon size="xxs"}}" alt="{{@site.title}} icon" /></a>
+            {{else}}
+                <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
+            {{/if}}
+        {{/is}}
+        {{#if @site.navigation}}
+            {{navigation}}
+        {{/if}}
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+        </div>
+        <script>
+            const links = document.querySelector('.social-links');
+            if(typeof twitter_url != 'undefined')
+                links.innerHTML += '<a class="social-link social-link-tw" href="' + twitter_url + '" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-twitter"></i></a>'
+            if(typeof github_url != 'undefined')
+                links.innerHTML += '<a class="social-link social-link-tw" href="' + github_url + '" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-github"></i></a>'
+            if(typeof xing_url != 'undefined')
+                links.innerHTML += '<a class="social-link social-link-tw" href="' + xing_url + '" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-xing"></i></a>'
+        </script>
+        {{#if @labs.subscribers}}
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        {{else}}
+        {{/if}}
+    </div>
+</nav>
