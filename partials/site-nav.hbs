@@ -16,12 +16,18 @@
         </div>
         <script>
             const links = document.querySelector('.social-links');
+            if(typeof facebook_url != 'undefined')
+                links.innerHTML += '<a class="social-link social-link-tw" href="' + facebook_url + '" title="Facebook" target="_blank" rel="noopener"><i class="fab fa-2x fa-facebook"></i></a>'
             if(typeof twitter_url != 'undefined')
                 links.innerHTML += '<a class="social-link social-link-tw" href="' + twitter_url + '" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-twitter"></i></a>'
+            if(typeof instagram_url != 'undefined')
+                links.innerHTML += '<a class="social-link social-link-tw" href="' + instagram_url + '" title="Instagram" target="_blank" rel="noopener"><i class="fab fa-2x fa-instagram"></i></a>'
             if(typeof github_url != 'undefined')
-                links.innerHTML += '<a class="social-link social-link-tw" href="' + github_url + '" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-github"></i></a>'
+                links.innerHTML += '<a class="social-link social-link-tw" href="' + github_url + '" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-2x fa-github"></i></a>'
             if(typeof xing_url != 'undefined')
-                links.innerHTML += '<a class="social-link social-link-tw" href="' + xing_url + '" title="Twitter" target="_blank" rel="noopener"><i class="fab fa-2x fa-xing"></i></a>'
+                links.innerHTML += '<a class="social-link social-link-tw" href="' + xing_url + '" title="Xing" target="_blank" rel="noopener"><i class="fab fa-2x fa-xing"></i></a>'
+            if(typeof linkedin_url != 'undefined')
+                links.innerHTML += '<a class="social-link social-link-tw" href="' + linkedin_url + '" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-2x fa-linkedin"></i></a>'
         </script>
         {{#if @labs.subscribers}}
             <a class="subscribe-button" href="#subscribe">Subscribe</a>
